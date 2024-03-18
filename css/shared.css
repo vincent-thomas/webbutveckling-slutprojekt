@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem;
+  background-color: black;
+}
+
+
+.logga {
+  padding: 0.5rem 1rem;
+  width: auto;
+  border-radius: 0.5rem;
+}
+
+.logga:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.layout-spacing {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
