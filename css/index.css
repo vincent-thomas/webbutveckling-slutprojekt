@@ -61,3 +61,23 @@
   justify-content: start;
   flex-direction: column;
 }
+
+.go-left {
+  width: 100%;
+  display: flex;
+}
+
+.go-right {
+  display: flex;
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .go-left {
+    justify-content: start
+  }
+
+  .go-right {
+    justify-content: end
+  }
+}

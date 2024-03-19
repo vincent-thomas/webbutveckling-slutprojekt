@@ -6,82 +6,104 @@
     <title>Stuff+ Pricing</title>
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/pricing.css" />
   </head>
-  <body>
-    <nav class="flex gap-4 justify-start">
-      <a href="/" class="link">
-        <h1>Stuff</h1>
-      </a>
-      <a href="/pricing.html" class="link">Pricing</a>
-    </nav>
+  <body class="flex flex-col gap-4">
+    <div>
+      <nav class="flex gap-4 justify-start">
+        <a href="/" class="link">
+          <h1>Stuff</h1>
+        </a>
+        <a href="/pricing.html" class="link">Pricing</a>
+      </nav>
+    </div>
+
     <div
-      class="layout-spacing flex flex-col text-center justify-center"
-      style="max-width: 1000px"
+      class="layout-spacing flex flex-col text-left justify-center gap-2"
+      style="padding-top: 5rem"
     >
-      <h1>Stuff+ Pricing</h1>
+      <h1 style="font-size: 3rem">Stuff+ Pricing</h1>
       <p class="text-text">Simple pricing for simple services</p>
-      <div class="gap-2 grid grid-cols-3">
+      <div class="gap-2 grid grid-cols-3 pt-4 bra-till-mobil">
         <div
           class="flex flex-col gap-2 text-left rounded-md"
           style="background-color: var(--color-card)"
         >
           <div class="p-4 flex flex-col gap-2">
-            <h1 class="text-xl">Great for average user!</h1>
-            <div class="flex justify-between w-full">
-              <p class="text-lg">Stuff Free</p>
-              <p class="text-lg">$0</p>
+            <h1 class="text-xl">Average user!</h1>
+            <div class="flex justify-between w-full gap-2">
+              <p class="text-lg text-muted-foreground">Stuff Free</p>
+              <p class="text-lg text-muted-foreground">$0</p>
             </div>
           </div>
           <div class="spacer"></div>
 
           <div class="p-4">
-            <p><em>Including features:</em></p>
+            <p class="mb-2"><em>Including features:</em></p>
             <ul class="pl-4">
               <li>500mb of storage</li>
               <li>E2E Encryption</li>
               <li>Comunity support</li>
             </ul>
           </div>
-        </div>
-        <div
-          class="flex flex-col p-4 gap-2 text-left rounded-md flex"
-          style="background-color: var(--color-card)"
-        >
-          <h1 class="text-xl">Great for average user!</h1>
-          <div class="flex justify-between w-full">
-            <p class="text-lg">Stuff+</p>
-            <p class="text-lg">$2.99</p>
-          </div>
-          <p><em>Including features:</em></p>
-          <ul class="pl-4">
-            <li>500mb of storage</li>
-            <li>E2E Encryption</li>
-            <li>Comunity support</li>
-          </ul>
         </div>
         <div
           class="flex flex-col gap-2 text-left rounded-md"
           style="background-color: var(--color-card)"
         >
-          <div class="p-2 flex flex-col flex-col gap-2">
-            <h1 class="text-xl">Great for average user!</h1>
+          <div class="p-4 flex flex-col gap-2">
+            <h1 class="text-xl">More storage</h1>
             <div class="flex justify-between w-full">
-              <p class="text-lg">Stuff Premium</p>
-              <p class="text-lg">$4.99</p>
+              <p class="text-lg text-muted-foreground">Stuff+</p>
+              <p class="text-lg text-muted-foreground">$2.99</p>
             </div>
           </div>
           <div class="spacer"></div>
-          <div class="p-2">
+
+          <div class="p-4">
+            <p class="mb-2"><em>Including features:</em></p>
+            <ul class="pl-4">
+              <li>Everything in Free</li>
+              <li>20GB of storage</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-2 text-left rounded-md"
+          style="background-color: var(--color-card)"
+        >
+          <div class="p-4 flex flex-col flex-col gap-2">
+            <h1 class="text-xl">For powerusers</h1>
+            <div class="flex justify-between w-full">
+              <p class="text-lg text-muted-foreground">Stuff Premium</p>
+              <p class="text-lg text-muted-foreground">$4.99</p>
+            </div>
+          </div>
+          <div class="spacer"></div>
+          <div class="p-4">
             <p class="mb-2">
-              <em><b>Including features:</b></em>
+              <em>Including features:</em>
             </p>
             <ul class="pl-4">
-              <li>500mb of storage</li>
+              <li>50GB of storage</li>
               <li>E2E Encryption</li>
               <li>Comunity support</li>
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="layout-spacing flex-col flex">
+      <h2 style="font-size: 2rem">Why you should use Stuff+</h2>
+      <p class="text-muted-foreground">
+        With Stuff+ you get more storage, more features and more support. You
+        also support the development of the product.
+      </p>
+      <div
+        style="background-color: var(--color-card); padding: 1rem"
+        class="rounded-md"
+      >
+        test
       </div>
     </div>
   </body>
