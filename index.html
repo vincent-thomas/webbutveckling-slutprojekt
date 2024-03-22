@@ -3,19 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Stuff Mail</title>
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
   </head>
   <body>
-    <nav class="flex gap-4 justify-start">
-      <a href="/" class="link">
-        <h1>Stuff</h1>
-      </a>
+    <div class="layout-spacing flex justify-between">
+      <nav class="flex gap-4 justify-start">
+        <a href="/" class="link">
+          <h1>Stuff</h1>
+        </a>
+        <a href="/pricing.html" class="link">Pricing</a>
+      </nav>
+      <button id="navbar-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
 
-      <a href="/pricing.html" class="link">Pricing</a>
-    </nav>
+    </div>
+    <div id="navbar-modal">
+      testing
+    </div>
+    <script src="/js/navbar.js"></script>
     <main>
       <div class="header-wrapper layout-spacing">
         <h1>Be productive</h1>
