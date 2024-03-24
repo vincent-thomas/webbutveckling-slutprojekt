@@ -1,0 +1,11 @@
+.blog-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media screen and (max-width: 767px) {
+  .blog-container {
+    grid-template-columns: 1fr;
+  }
+}

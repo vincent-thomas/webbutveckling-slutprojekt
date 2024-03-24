@@ -6,18 +6,153 @@
     <title>Stuff+ Pricing</title>
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/pricing.css" />
   </head>
   <body class="flex flex-col gap-4">
-    <div class="layout-spacing">
-      <nav class="flex gap-4 justify-start">
-        <a href="/" class="link">
-          <h1>Stuff</h1>
+    <header class="navbar-container">
+      <div class="navbar-section">
+        <a class="branding-link" href="/">
+          <h1 class="branding">Stuff Mail</h1>
         </a>
-        <a href="/pricing.html" class="link">Pricing</a>
+        <a class="navbar-link mobile-hide" href="/pricing.html">Pricing</a>
+        <a class="navbar-link mobile-hide" href="/blog.html">Blog</a>
+      </div>
+      <nav class="navbar-section">
+        <div class="flex justify-between items-center mobile-hide" style="gap:1rem">
+          <a class="navbar-link" href="#">Login</a>
+          <a class="navbar-link-primary" href="#">Get Stuff free</a>
+        </div>
+        <div class="pc-hide">
+          <button id="modal-btn">activate</button>
+          <div id="modal" class="not-show">
+            <div class="modal-overlay" style="position: fixed; top: 0;bottom: 0;left:0%;right:0;background-color: rgba(0,0,0,0.5)"></div>
+            <div class="modal-container" style="position: fixed;padding: 1rem;transform: translateX(-50%);left:50%;background-color: var(--background2);border-radius: var(--rounding); width: minmax(100%, 400px);display:flex;flex-direction:column;gap:.5rem; width: 100%">
+              <h1>Links</h1>
+              <a href="/" class="navbar-link">Home</a>
+              <a href="/pricing.html" class="navbar-link">Pricing</a>
+              <a href="/blog.html" class="navbar-link">Blog</a>
+              <a href="#" class="navbar-link">Login</a>
+              <a href="#" class="navbar-link-primary">Get Stuff free</a>
+            </div>
+          </div>
+        </div>
       </nav>
-    </div>
-    <div
+      <script src="/js/navbar.js"></script>
+    </header>
+
+
+    <main style="display: flex; flex-direction: column;">
+      <section class="section">
+        <div style="display: flex; 
+        padding-top: 7rem; 
+        flex-direction: column; 
+        ">
+          <h1 class="section-title">
+            <span class="branding-color">Stuff+</span> Pricing
+          </h1>
+          <p class="section-desc">Simple pricing for simple services.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="pricing-table-container">
+          <div style="display: flex; 
+          flex-direction: column; 
+          border-radius: 0.375rem; 
+          border: 1px solid var(--border);
+          ">
+            <div style="padding:1rem;">
+              <div class="flex justify-between items-center">
+                <h2 class="text-3xl font-bold">Stuff free</h2>
+                <p class="text-lg font-semibold text-muted-foreground">free</p>
+              </div>
+              <p class="text-lg text-muted-foreground">Average consumers</p>
+            </div>
+            <div style="
+            width: 100%; 
+            border-top: 1px solid var(--border);
+            ">
+
+            </div>
+            <div class="p-4" style="background-color: var(--background2);">
+              <p class="text-lg font-semibold">
+                <em>Features included:</em>
+              </p>
+              <ul class="things-list">
+                <li>2GB storage</li>
+                <li>Tracking prevention</li>
+                <li>End-to-End encrypted data</li>
+                <li>Community support</li>
+              </ul>
+            </div>
+          </div>
+          <div style="display: flex; 
+          flex-direction: column; 
+          border-radius: 0.375rem; 
+          border: 1px solid var(--border);
+          ">
+            <div style="padding:1rem;">
+              <div class="flex justify-between items-center">
+                <h2 class="text-3xl font-bold">Stuff+</h2>
+                <p class="text-lg font-semibold text-muted-foreground">$2.99/month</p>
+              </div>
+              <p class="text-lg text-muted-foreground">Someone looking for more power</p>
+            </div>
+            <div style="
+            width: 100%; 
+            border-top: 1px solid var(--border);
+            ">
+
+            </div>
+            <div class="p-4" style="background-color: var(--background2); height: 100%;display:flex;flex-direction: column;justify-content:space-between;">
+              <div>
+                <p class="text-lg font-semibold">
+                  <em>Features included:</em>
+                </p>
+                <ul class="things-list">
+                  <li>Everything in free</li>
+                  <li>20GB storage</li>
+                </ul>
+              </div>
+              <button class="navbar-link-primary" style="margin-left: auto;">Get Stuff+</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div style="display: flex; flex-direction: column; gap: 1rem">
+          <h1>Vill du prova?</h1>
+          <p>Premumerera på Stuff+ så får du 3 månader gratis!</p>
+          <div>
+            <button
+              class="navbar-link-primary"
+            >
+              Prova Stuff+
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="section" style="padding-block: 0.75rem;">
+        <div style="display:flex;justify-content: space-between;align-items:center;width:100%;">
+          <div class="max-sm:hidden" style="display:flex;align-items:center;gap:0.75rem;">
+            <img src="/img/me.jpg" width="30" height="30" style="border-radius: 50%;" alt="me who built the app">
+            <p>© 2021 Stuff</p>
+            <a href="https://github.com/vincent-thomas" target="_blank" class="navbar-link">Vincent Thomas</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:1rem"  class=" mobile-hide">
+            <a class="navbar-link" href="/cookies">Cookies</a>
+            <a class="navbar-link" href="/privacy-policy">Privacy policy</a>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+
+
+
+    <!-- <div
       class="layout-spacing flex flex-col text-left justify-center gap-2"
       style="padding-top: 5rem"
     >
@@ -129,6 +264,6 @@
           </button>
         </div>
       </div>
-    </div>
+    </div> -->
   </body>
 </html>
