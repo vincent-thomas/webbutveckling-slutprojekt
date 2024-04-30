@@ -5,3 +5,29 @@
     ;
   }
 }
+
+.pricing-table-container {
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .pricing-table-container {
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+
+}
+
+.things-list {
+  display: flex;
+  padding: 0.25rem;
+  padding-left: 1.5rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-type: disc;
+}

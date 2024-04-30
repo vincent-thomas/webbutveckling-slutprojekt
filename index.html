@@ -3,215 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Stuff Mail</title>
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
   </head>
   <body>
-    <nav class="flex gap-4 justify-start">
-      <a href="/" class="link">
-        <h1>Stuff</h1>
-      </a>
-
-      <a href="/pricing.html" class="link">Pricing</a>
-    </nav>
-    <main>
-      <div class="header-wrapper layout-spacing">
-        <h1>Be productive</h1>
-        <p>With stuff workspace</p>
+    <header class="navbar-container">
+      <div class="navbar-section">
+        <a class="branding-link" href="/">
+          <h1 class="branding">Stuff Mail</h1>
+        </a>
+        <a class="navbar-link mobile-hide" href="/pricing.html">Pricing</a>
+        <a class="navbar-link mobile-hide" href="/blog.html">Blog</a>
       </div>
-      <div class="layout-spacing hero-cards-container">
-        <div
-          style="
-            background-color: rgba(200, 200, 200, 0.25);
-            border-radius: 10px;
-            padding: 1rem;
-          "
-        >
-          <div style="display: flex; gap: 0.5rem">
-            <img src="img/istockphoto-1070949106-612x612.jpg" alt="" />
-            <h1>Easy work!</h1>
-          </div>
-          <p>With powerfull workspace tools you can handle anything!</p>
+      <nav class="navbar-section">
+        <div class="flex justify-between items-center mobile-hide" style="gap:1rem">
+          <a class="navbar-link" href="#">Login</a>
+          <a class="navbar-link-primary" href="#">Get Stuff free</a>
         </div>
-        <div
-          style="
-            background-color: rgba(200, 200, 200, 0.25);
-            border-radius: 10px;
-            padding: 1.25rem;
-          "
-        >
-          <h1>Fast moving</h1>
-          <p>You never miss a change with uss</p>
-        </div>
-        <div></div>
-      </div>
-      <div class="spacer"></div>
-      <div class="layout-spacing">
-        <div class="products-container">
-          <h1>Produkter</h1>
-        </div>
-        <div class="products">
-          <a class="product-wrapper card" href="/product/drive">
-            <div style="display: flex; align-items: start">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M4 1.5C2.89543 1.5 2 2.39543 2 3.5V4.5C2 4.55666 2.00236 4.61278 2.00698 4.66825C0.838141 5.07811 0 6.19118 0 7.5V19.5C0 21.1569 1.34315 22.5 3 22.5H21C22.6569 22.5 24 21.1569 24 19.5V7.5C24 5.84315 22.6569 4.5 21 4.5H11.874C11.4299 2.77477 9.86384 1.5 8 1.5H4ZM9.73244 4.5C9.38663 3.9022 8.74028 3.5 8 3.5H4V4.5H9.73244ZM3 6.5C2.44772 6.5 2 6.94772 2 7.5V19.5C2 20.0523 2.44772 20.5 3 20.5H21C21.5523 20.5 22 20.0523 22 19.5V7.5C22 6.94772 21.5523 6.5 21 6.5H3Z"
-                  fill="currentColor"
-                />
-              </svg>
+        <div class="pc-hide">
+          <button id="modal-btn">activate</button>
+          <div id="modal" class="not-show">
+            <div class="modal-overlay" style="position: fixed; top: 0;bottom: 0;left:0%;right:0;background-color: rgba(0,0,0,0.5)"></div>
+            <div class="modal-container" style="position: fixed;padding: 1rem;transform: translateX(-50%);left:50%;background-color: var(--background2);border-radius: var(--rounding); width: minmax(100%, 400px);display:flex;flex-direction:column;gap:.5rem; width: 100%">
+              <h1>Links</h1>
+              <a href="/" class="navbar-link">Home</a>
+              <a href="/pricing.html.html" class="navbar-link">Pricing</a>
+              <a href="/blog.html" class="navbar-link">Blog</a>
+              <a href="#" class="navbar-link">Login</a>
+              <a href="#" class="navbar-link-primary">Get Stuff free</a>
             </div>
-            <div class="product-right">
-              <h1>Drive</h1>
-              <p>Cloud storage for the masses</p>
-            </div>
-          </a>
-          <a class="product-wrapper card" href="/product/mark">
-            <div style="display: flex; align-items: start">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M7 18H17V16H7V18Z" fill="currentColor" />
-                <path d="M17 14H7V12H17V14Z" fill="currentColor" />
-                <path d="M7 10H11V8H7V10Z" fill="currentColor" />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-            <div class="product-right">
-              <h1>Mark</h1>
-              <p>Realtime document editor</p>
-            </div>
-          </a>
-          <a class="product-wrapper card" href="/product/mail.html">
-            <div style="display: flex; align-items: start">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M3.00977 5.83789C3.00977 5.28561 3.45748 4.83789 4.00977 4.83789H20C20.5523 4.83789 21 5.28561 21 5.83789V17.1621C21 18.2667 20.1046 19.1621 19 19.1621H5C3.89543 19.1621 3 18.2667 3 17.1621V6.16211C3 6.11449 3.00333 6.06765 3.00977 6.0218V5.83789ZM5 8.06165V17.1621H19V8.06199L14.1215 12.9405C12.9499 14.1121 11.0504 14.1121 9.87885 12.9405L5 8.06165ZM6.57232 6.80554H17.428L12.7073 11.5263C12.3168 11.9168 11.6836 11.9168 11.2931 11.5263L6.57232 6.80554Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-            <div class="product-right">
-              <h1>Mail</h1>
-              <p>Smart and fast email</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div
-        class="layout-spacing"
-        style="display: flex; flex-direction: column; gap: 2rem"
-      >
-        <h1>Våra garantier</h1>
-        <div class="go-left">
-          <div
-            class="p-6 card"
-            style="display: flex; gap: 0.75rem; flex-direction: column"
-          >
-            <div style="display: flex; align-items: center" class="gap-4">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M18 10.5C19.6569 10.5 21 11.8431 21 13.5V19.5C21 21.1569 19.6569 22.5 18 22.5H6C4.34315 22.5 3 21.1569 3 19.5V13.5C3 11.8431 4.34315 10.5 6 10.5V7.5C6 4.18629 8.68629 1.5 12 1.5C15.3137 1.5 18 4.18629 18 7.5V10.5ZM12 3.5C14.2091 3.5 16 5.29086 16 7.5V10.5H8V7.5C8 5.29086 9.79086 3.5 12 3.5ZM18 12.5H6C5.44772 12.5 5 12.9477 5 13.5V19.5C5 20.0523 5.44772 20.5 6 20.5H18C18.5523 20.5 19 20.0523 19 19.5V13.5C19 12.9477 18.5523 12.5 18 12.5Z"
-                  fill="currentColor"
-                />
-              </svg>
-              <h1>End-to-end encryption</h1>
-            </div>
-
-            <p>Vi använder oss av säker militärgrad-kryptering, läs mer här</p>
           </div>
         </div>
-        <div class="go-right" style="">
-          <div
-            class="p-6 card"
-            style="
-              display: flex;
-              gap: 0.75rem;
-              flex-direction: column;
-              max-width: 500px;
-            "
-          >
-            <div style="display: flex; align-items: center" class="gap-4">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M18 10.5C19.6569 10.5 21 11.8431 21 13.5V19.5C21 21.1569 19.6569 22.5 18 22.5H6C4.34315 22.5 3 21.1569 3 19.5V13.5C3 11.8431 4.34315 10.5 6 10.5V7.5C6 4.18629 8.68629 1.5 12 1.5C15.3137 1.5 18 4.18629 18 7.5V10.5ZM12 3.5C14.2091 3.5 16 5.29086 16 7.5V10.5H8V7.5C8 5.29086 9.79086 3.5 12 3.5ZM18 12.5H6C5.44772 12.5 5 12.9477 5 13.5V19.5C5 20.0523 5.44772 20.5 6 20.5H18C18.5523 20.5 19 20.0523 19 19.5V13.5C19 12.9477 18.5523 12.5 18 12.5Z"
-                  fill="currentColor"
-                />
-              </svg>
-              <h1>Privat information</h1>
-            </div>
-
-            <p>
-              Stuff kan inte läsa igenom vad för information du laddar upp till
-              våra servrar även om vi ville
-            </p>
+      </nav>
+      <script src="/js/navbar.js"></script>
+    </header>
+    <section class="section">
+      <div class="section-left">
+        <h1 class="section-title">
+          Empower your inbox with<!-- --> <span class="branding-color">Stuff</span>
+        </h1>
+        <p class="section-desc">Stuff mail for the productive</p>
+        <div style="padding-top: 0.5rem;">
+          <div class="section-bottom">
+            <a class="navbar-link-primary" href="/auth/init">Get Stuff free</a>
           </div>
         </div>
       </div>
-      <div class="spacer"></div>
-      <div class="layout-spacing">
-        <div style="display: flex; flex-direction: column; gap: 1rem">
-          <h1>Vill du prova?</h1>
-          <p>Premumerera på Stuff+ så får du 3 månader gratis!</p>
-          <div>
-            <button
-              style="
-                background-color: orange;
-                padding: 1rem;
-                border-radius: 7px;
-                border: none;
-                color: black;
-                font-weight: 500;
-                font-size: 1.15rem;
-              "
-            >
-              Prova Stuff+
-            </button>
+      <svg id="_0296_empty_inbox" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="hero-svg" style="max-width: 400px"><defs><linearGradient id="linear-gradient" x1="-578.68" y1="1417.05" x2="-580.46" y2="1572.85" gradientTransform="translate(849 1803.66) scale(1 -1)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#231f20" stop-opacity="0" style="stop-color:rgb(77, 77, 77)"></stop><stop offset="1" stop-color="#231f20" style="stop-color:rgb(35, 31, 32)"></stop></linearGradient><linearGradient id="linear-gradient-2" x1="-669.83" y1="1572.66" x2="-617.6" y2="1572.66"></linearGradient><linearGradient id="linear-gradient-3" x1="-558.64" y1="1610.17" x2="-568.11" y2="1449.09" gradientTransform="translate(836.78 1793.46) scale(1 -1)"></linearGradient><linearGradient id="linear-gradient-4" x1="-669.57" y1="1545.12" x2="-668.38" y2="1524.97"></linearGradient></defs><g id="background"><path class="cls-5" d="M493.66,354.55c-.25,2.6-.71,5.18-1.38,7.7-1.55,5.83-3.89,11.43-6.96,16.63-17.77,30.99-52.57,48.93-87.58,56.26-35.02,7.32-71.17,5.73-106.89,7.37-48.25,2.19-96.38,10.28-144.64,7.63-22.88-1.27-45.55-4.94-67.66-10.96-106.57,0-54.47-162.75-48.34-224.45,2.66-26.56,5.74-54.44,20.9-76.43,17.95-26,49.72-38.96,80.81-44.62,31.09-5.67,63.07-5.31,93.99-11.84,50.47-10.62,99.33-39.2,150.28-31.05,49.98,7.97,90.54,55.58,90.51,106.19,0,35.53-16.12,70.83-6.87,106.25,8.05,30.71,36.92,57.91,33.82,91.34Z"></path><path class="cls-5" d="M492.28,362.25c-1.55,5.83-3.89,11.43-6.96,16.63-17.77,30.99-52.57,48.93-87.58,56.26-35.02,7.32-71.17,5.73-106.89,7.37-48.25,2.19-96.38,10.28-144.64,7.63-22.88-1.27-45.55-4.94-67.66-10.96-14.81-4.04-45.42-9.3-54.38-23.02-5.6-8.56-6.53-24.6-6.71-38.12,3.36.53,6.68,1.33,9.61,1.6,9.92.96,19.96,1.02,29.9,1.33,21.06.67,42.14,1.12,63.23,1.35,83.95.89,167.83-1.87,251.65-8.29,40.21-3.09,80.36-7.02,120.44-11.78Z"></path><path class="cls-5" d="M206.94,392.91c-13.79,2.46-27.45,5.66-41.41,7-9.05.89-19.04,1.34-25.61,7.63-1.56,1.33-2.59,3.18-2.91,5.21-.38,4.36,4.18,7.39,8.24,9,11.87,4.69,24.79,6.04,37.52,6.85,20.76,1.32,41.61,1.34,62.38,1.35l61.98.06c18.29,0,38.6-.74,51.71-13.51,2.59-2.52,4.88-5.64,5.31-9.23.73-5.83-3.69-11.3-9.03-13.73-9.24-4.22-23.07-3.35-33.15-4.43-13.09-1.45-26.27-2.25-39.44-2.41-25.33-.31-50.64,1.77-75.58,6.21Z"></path></g><g id="inbox"><rect class="cls-7" x="257.86" y="259.6" width="23.69" height="146.11"></rect><rect class="cls-1" x="257.86" y="259.6" width="23.69" height="146.11"></rect><path class="cls-7" d="M337.25,214.73v57.9h-162.33v-57.9c.04-16.65,13.56-30.13,30.22-30.1h101.91c16.64,0,30.16,13.46,30.21,30.1Z"></path><path class="cls-3" d="M205.26,189.62h0c14.43,0,26.14,11.69,26.15,26.13,0,.01,0,.03,0,.04v56.58h-52.24v-56.58c-.02-14.43,11.66-26.15,26.09-26.17Z"></path><path class="cls-4" d="M337.26,214.73v57.9h-100.05v-61.28c-2.98-16.02-14.25-23.37-23.52-26.77h93.36c16.66,0,30.18,13.48,30.21,30.14Z"></path><rect class="cls-7" x="122.8" y="264.34" width="114.44" height="8.31" rx="4.15" ry="4.15"></rect><rect class="cls-2" x="122.8" y="264.34" width="114.44" height="8.31" rx="4.15" ry="4.15"></rect><path class="cls-7" d="M293.61,223.64c-.22.73-.89,2.99-1.07,3.8l-2.21,8.2c-.1.36-.15.73-.15,1.11,0,.49.39.89.88.89.03,0,.06,0,.08,0,.86-.07,1.67-.4,2.33-.97,1.77-1.4,2.98-4.13,2.98-6.98.08-3.23-1.53-6.26-4.24-8.01-2.03-1.09-4.31-1.63-6.61-1.55-7.79,0-13.28,5.16-13.28,12.48s4.91,11.75,12.33,11.75c1.91,0,3.81-.27,5.65-.81,1.46-.45,2.86-1.11,4.13-1.96l2.26,3.25c-1.43.94-2.98,1.66-4.62,2.14-2.53.79-5.17,1.19-7.83,1.19-5.21,0-9.27-1.48-12.19-4.43-2.81-2.91-4.34-6.81-4.26-10.85-.11-4.29,1.51-8.43,4.5-11.51,3.4-3.4,7.87-5.06,13.59-5.06,8.61,0,14.74,5.54,14.74,13.28.05,3.32-1.22,6.52-3.54,8.9-1.81,1.88-4.3,2.97-6.91,3.03-1.23.09-2.43-.45-3.18-1.43-.2-.35-.31-.75-.34-1.15-1.18,1.53-3.02,2.39-4.95,2.33-3.66,0-5.99-2.74-5.99-6.94,0-6.2,4.11-11.41,9.01-11.41,2.07,0,3.11.51,4.1,2.07l.37-1.29,4.4-.04ZM286.01,234.61c.9-1.77,1.4-3.71,1.48-5.69,0-1.51-.89-2.55-2.14-2.55s-2.7.93-3.62,2.66c-.9,1.71-1.41,3.6-1.48,5.53,0,1.96.74,2.99,2.14,2.99s2.66-1.06,3.62-2.94Z"></path></g><g id="wind"><path class="cls-6" d="M186.82,223.27c-15.47,0-30.46-4.69-42.1-13.34-3.03-2.21-5.75-4.81-8.11-7.73-4.43-.5-8.69-1.96-12.49-4.29-17.93-10.67-23.81-33.86-13.13-51.79,2.9-4.88,6.87-9.04,11.6-12.17l1.7,2.57c-15.98,10.57-20.35,32.1-9.78,48.07,2.88,4.35,6.7,7.99,11.19,10.66,2.65,1.6,5.53,2.76,8.55,3.44-1.78-2.99-2.83-6.37-3.06-9.85-.16-5.22,2.03-10.23,5.97-13.66,4.74-4.59,12.3-4.46,16.89.28.65.68,1.23,1.43,1.7,2.24,2.11,3.21,2.86,7.12,2.09,10.88-1.43,6.49-7.22,11.83-14.44,13.28-.88.18-1.76.3-2.66.36,1.79,1.91,3.75,3.65,5.85,5.21,13.14,9.74,30.78,14.24,48.37,12.28l.34,3.06c-2.81.32-5.64.48-8.47.48ZM138.24,199.22c1.52.04,3.03-.07,4.52-.35,5.94-1.2,10.88-5.68,12.03-10.91.58-2.96-.02-6.03-1.66-8.55-2.42-4.25-7.83-5.72-12.08-3.3-.69.39-1.32.88-1.88,1.44-3.23,2.79-5.03,6.88-4.91,11.15.3,3.81,1.68,7.47,3.98,10.53Z"></path><path class="cls-7" d="M135.59,127.62c1.34-4.33,4.19-8.05,8.02-10.47,4.83-2.98,10.77-3.44,16.43-3.82-1.51,1.22-2.49,2.97-2.74,4.9-.35,1.89-.31,3.84-.6,5.75-1.46,8.09-8.41,14.04-16.63,14.23-.75-4.06,2.13-7.81,4.84-10.93-3.18.94-5.57,3.57-6.2,6.83-.11,1.34-.3,2.67-.56,3.98-.25.82-1.35,2.82-2.49,2.39-.82-.31-.89-3.32-.98-4.07-.29-2.96.01-5.94.89-8.77Z"></path><path class="cls-7" d="M91.72,145.89c.08,2.18.38,4.36.89,6.48.51,2.13,1.65,4.07,3.26,5.56,1.13.79,2.21,1.65,3.24,2.56.06.08.14.15.24.18,1.02.27,2.01-3.78,1.99-4.48-.2-1.54-.75-3.01-1.6-4.3-1.65-3.09-4.58-5.29-8.01-5.99Z"></path></g></svg>
+    </section>
+    <section class="section" style="gap:0.5rem;align-items:unset;">
+      <div class="card">
+        <div>
+          <h2>Privacy</h2>
+          <p>Stuff is end-to-end encrypted which means we cant even read your emails</p>
+        </div>
+        <a class="button-link" style="margin-left: auto;">Read more</a>
+      </div>
+      <div class="card">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight text-foreground">Security</h2>
+          <p class="text-muted-foreground">Your account stays with us. We have extensive security measures.</p>
+        </div>
+        <a class="button-link" href="/whitepaper" style="margin-left: auto;">Whitepapers</a>
+      </div>
+      <div class="card">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight text-foreground">Feature rich</h2>
+          <p class="text-muted-foreground">With Stuff extensions more and more features are being added every week</p>
+        </div>
+        <a href="#features" class="button-link" style="margin-left: auto;">Show features</a>
+      </div>
+    </section>
+    <div style="border-top: 1px solid var(--border);background-color: var(--background2)">
+      <section class="section" style="flex-direction:column;">
+        <p>Stuff is an email service</p>
+        <h1 style="font-size: 2.2rem;">Stuff Features</h1>
+        <div>
+          <div class="features-container" style="">
+            <div class="feature conversation-container">
+              <h2 class="text-3xl font-bold tracking-tight text-foreground">Conversations</h2>
+              <p class="text-muted-foreground max-w-[30ch] text-wrap">In Stuff mail you can have conversations with other email users.</p>
+              <img src="/img/conversationv2.png" alt="" class="conv-image rounded-xl shadow-md mt-4 md:skew-y-[-12deg] md:rotate-[8deg] md:w-[80%] w-full ml-auto mr-2 aspect-square border-border border">
+            </div>
+            <div class="feature folderrules-feature">
+              <p class="text-muted-foreground">Extension:</p>
+              <h2 class="text-3xl font-bold tracking-tight text-foreground">Folder Rules</h2>
+              <p class="text-muted-foreground max-w-[30ch] text-wrap">With folder rules you can customise where and how your emails are recieved. You can configure forwarding, archiving, moving of mails when recieved.</p>
+              <a class="ml-auto flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors outline-none disabled:pointer-events-none disabled:opacity-75 gap-2 text-primary underline-offset-4 hover:underline px-4 py-2" href="#">Learn more</a>
+            </div>
+            <div class="feature extensions-feature" style="padding: 0;">
+              <a href="/extensions" style="display:flex;flex-direction:column">
+                <div style="padding: 2rem; padding-bottom: 0">
+                  <h2 class="text-3xl font-bold tracking-tight text-foreground">Extensions</h2>
+                  <p class="text-muted-foreground max-w-[50ch] text-wrap">With Stuff Extensions, behavior and features can be added and highly customised to Stuff.</p>
+                </div>
+                <img src="/img/extensions.png" class="extensions-image">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+    </div>
     </main>
+    <footer>
+      <section class="section" style="padding-block: 0.75rem;">
+        <div style="display:flex;justify-content: space-between;align-items:center;width:100%;">
+          <div class="max-sm:hidden" style="display:flex;align-items:center;gap:0.75rem;">
+            <img src="/img/me.jpg" width="30" height="30" style="border-radius: 50%;" alt="me who built the app">
+            <p>© 2021 Stuff</p>
+            <a href="https://github.com/vincent-thomas" target="_blank" class="navbar-link">Vincent Thomas</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:1rem"  class=" mobile-hide">
+            <a class="navbar-link" href="/cookies">Cookies</a>
+            <a class="navbar-link" href="/privacy-policy">Privacy policy</a>
+          </div>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>

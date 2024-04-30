@@ -14,13 +14,27 @@
   --color-background: black;
   --color-text: white;
   --color-card: rgb(49, 49, 49);
+  --rounding: 0.25rem;
+  --muted: hsl(12 6.5% 15.1%);
+  --accent: #0090FF;
+  --accent-foreground: hsl(0 0% 98%);
+  --lg-breakpoint: 1074px;
+  --background2: #191919;
+  --border: #393A40;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 body {
-  min-width: 400px;
   min-height: 100vh;
   width: 100%;
   background-color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .p-2 {
@@ -38,6 +52,11 @@ body {
 .p-6 {
   padding: 1.5rem;
 }
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
 
 .gap-2 {
   gap: 0.5rem;
@@ -140,6 +159,23 @@ a.link:hover {
   margin-bottom: 0.5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .text-muted-foreground {
   color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 767px) {
+
+  .pc-hide {
+    display: none;
+  }
 }
