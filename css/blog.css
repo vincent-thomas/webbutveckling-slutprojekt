@@ -4,6 +4,7 @@
   gap: 0.75rem;
 }
 
+
 @media screen and (max-width: 767px) {
   .blog-container {
     grid-template-columns: 1fr;
