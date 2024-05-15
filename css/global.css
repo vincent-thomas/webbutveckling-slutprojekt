@@ -13,10 +13,10 @@
 :root {
   --color-background: black;
   --color-text: white;
-  --color-card: rgb(49, 49, 49);
+  --color-card: #313131;
   --rounding: 0.25rem;
   --muted: hsl(12 6.5% 15.1%);
-  --accent: #0090FF;
+  --accent: #1A9CFF;
   --accent-foreground: hsl(0 0% 98%);
   --lg-breakpoint: 1074px;
   --background2: #191919;
